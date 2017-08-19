@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css?family=Cutive+Mono');
+
+.App {
+  text-align: center;
+  font-family: 'Cutive Mono', monospace;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-nav-list {
+  list-style: none;
+}
+
+.App-header {
+  text-transform: uppercase;
+  padding: 2rem;
+  border: 1px solid black;
+  display: inline-flex;
+
+}
+.header__decoration {
+  position: relative;
+  top: -4px;
+  display: flex;
+  justify-content: center;
+}
+.decoration {
+  position: relative;
+  color: hsl(180, 80%, 50%);
+}
+
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
