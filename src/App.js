@@ -9,6 +9,12 @@ import './App.css';
 */
 class App extends Component {
   render() {
+    const mainLinks = [
+      {url: '#', display: 'blog'},
+      {url: '#', display: 'resume'},
+      {url: 'https://github.com/cyanCYMK', display: 'github'},
+      {url: 'https://www.linkedin.com/in/christineylee4', display: 'linkedin'},
+    ]
     return (
       <div className="App">
         <header>
@@ -21,17 +27,21 @@ class App extends Component {
 
         </header>
 
-        <nav className="App-nav">
-          <ul className="App-nav-list">
-            <li><a href="#">blog</a></li>
-            <li><a href="#">resume</a></li>
-            <li><a href="#">github</a></li>
-            <li><a href="#">linkedin</a></li>
-          </ul>
-        </nav>
+        <MainNav links={ mainLinks } />
       </div>
     );
   }
+}
+
+const MainNav = (props) => {
+  // props.links is array of {url, display}
+  return (
+    <nav className="main-nav">
+      <ul className="nav-list">
+        { props.links.map(link => (<li><a href={`${link.url}`}>{link.display}</a></li>)) }
+      </ul>
+    </nav>
+  );
 }
 
 export default App;
